@@ -31,8 +31,36 @@
 
   <title>recipe_pp</title>
   <link rel="manifest" href="manifest.json">
+
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
 </head>
 <body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCFtn3Zd-Ajb8RFiPtzZvbNzhpx--SuewE",
+    authDomain: "recipeapp-c1227.firebaseapp.com",
+    projectId: "recipeapp-c1227",
+    storageBucket: "recipeapp-c1227.appspot.com",
+    messagingSenderId: "267485003505",
+    appId: "1:267485003505:web:ce15bbb290434b38b83350",
+    measurementId: "G-TZCMF0SR74"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

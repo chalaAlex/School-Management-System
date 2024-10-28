@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:recipe_pp/firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase with manual options
+  try {
+    await Firebase.initializeApp(
+      options: FirebaseOptionsWeb.options,
+    );
+    print('Firebase initialized successfully!');
+  } catch (e) {
+    print('Firebase initialization failed: $e');
+  }
+
   runApp(const MyApp());
 }
 
